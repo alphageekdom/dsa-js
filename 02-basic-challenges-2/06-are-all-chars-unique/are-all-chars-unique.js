@@ -1,17 +1,27 @@
 const areAllCharsUnique = (str) => {
-  const charCount = {};
+  //   const charCount = {};
+
+  //   for (let i = 0; i <= str.length; i++) {
+  //     const char = str[i];
+
+  //     if (charCount[char]) return false;
+
+  //     charCount[char] = true;
+  //   }
+
+  //   return true;
+
+  const charSet = new Set();
 
   for (let i = 0; i <= str.length; i++) {
     const char = str[i];
 
-    if (charCount[char]) return false;
+    if (charSet.has(char)) return false;
 
-    charCount[char] = true;
+    charSet.add(char);
   }
 
   return true;
 };
 
-let result = areAllCharsUnique('apple');
-
-console.log(result);
+modules.export = areAllCharsUnique;
