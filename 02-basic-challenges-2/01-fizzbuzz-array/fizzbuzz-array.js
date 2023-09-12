@@ -16,6 +16,4 @@ const fizzBuzz = (num) => {
   return arr;
 };
 
-const result = fizzBuzz(100);
-
-console.log(result);
+module.exports = fizzBuzz;
